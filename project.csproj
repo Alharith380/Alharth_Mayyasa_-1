@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED8B7306-5511-43EB-9205-2ACF0206A6BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>project</RootNamespace>
+    <AssemblyName>project</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\DELL\Desktop\مشروع متقدمة\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>14ABA37AC2A39E2972979613F7549D1B45EC07E0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>project_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\WindowsFormsApplication4\packages\Guna.UI2.WinForms.2.0.4.7\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\DiscountInfo.cs" />
+    <Compile Include="Classes\Invoice.cs" />
+    <Compile Include="Classes\InvoiceItem.cs" />
+    <Compile Include="Classes\InvoiceSummary.cs" />
+    <Compile Include="Classes\Marketer.cs" />
+    <Compile Include="Classes\Product.cs" />
+    <Compile Include="Forms\AddMarketers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddMarketers.Designer.cs">
+      <DependentUpon>AddMarketers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Addtyps_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Addtyps_Form.Designer.cs">
+      <DependentUpon>Addtyps_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Billing__History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Billing__History.Designer.cs">
+      <DependentUpon>Billing__History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailsForm.Designer.cs">
+      <DependentUpon>DetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentDialog .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentDialog .Designer.cs">
+      <DependentUpon>PaymentDialog .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ReportBuilder.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Reports_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports_Form.Designer.cs">
+      <DependentUpon>Reports_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salesbasket_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salesbasket_Form.Designer.cs">
+      <DependentUpon>Salesbasket_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\startslre_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\startslre_Form.Designer.cs">
+      <DependentUpon>startslre_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\InvoiceRepository.cs" />
+    <Compile Include="Repositories\MarketerRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Services\CashPaymentService.cs" />
+    <Compile Include="Services\DebtPaymentService.cs" />
+    <Compile Include="Services\InvoiceService.cs" />
+    <Compile Include="Services\IPaymentService.cs" />
+    <Compile Include="Services\ProductService.cs" />
+    <EmbeddedResource Include="Forms\AddMarketers.resx">
+      <DependentUpon>AddMarketers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Addtyps_Form.resx">
+      <DependentUpon>Addtyps_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Billing__History.resx">
+      <DependentUpon>Billing__History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetailsForm.resx">
+      <DependentUpon>DetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentDialog .resx">
+      <DependentUpon>PaymentDialog .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\Reports_Form.resx">
+      <DependentUpon>Reports_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salesbasket_Form.resx">
+      <DependentUpon>Salesbasket_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\startslre_Form.resx">
+      <DependentUpon>startslre_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="project_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuts %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency_exchange_finance_coins_money_usd_dollar_icon_262507.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\لقطة الشاشة 2025-04-14 174646.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mac_Dictionary_23497.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trophy_jewelry_winner_win_treasure_gift_blue_diamond_game_icon_262398.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32349redapple_98912.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hello everyone! Welcome to the Shopping Festival!.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shipping_products_22121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\relief_goods_box_icon_148329.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1491253675-19document-list_82899.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wish_list_checklist_icon_192437.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-big-parcel-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-list-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppaymentorderbuy-07_icon-icons.com_73866.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-icon_34368.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power_on_off_switch_exit_icon_141963.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shutdown-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-full-inbox-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-to-basket-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hello everyone! Welcome to the Shopping Festival! %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tools-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-can-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم بدون عنوان %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__2_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__4_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__4_-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__6_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم بدون عنوان %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__7_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__8_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__9_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__12_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__6_-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\لقطة_الشاشة_2025-04-14_174646-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__13_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__22_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__24_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__21_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__20_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__23_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__22_-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم بدون عنوان %285%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم بدون عنوان %2814%29 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__15_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__33_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__25_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__26_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__32_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__31_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__23_-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__30_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__34_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__35_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم_بدون_عنوان__35_-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-circled-right-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White Black Modern Natural Skincare Products Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-inquiry-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-inquiry-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subscription-business-model_18419552.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-all_17198263.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-all_171982631.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_1628622.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_992481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_9035574.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_18212719.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-forward-button-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-circled-right-601.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-list-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-total-sales-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-male-user-group-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-total-sales-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-total-sales-482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-checkout-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-to-do-list-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-euro-money-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-clue-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-502.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-supermarket-64.png" />
+    <Content Include="Resources\resources\1.png" />
+    <Content Include="Resources\resources\1491253675-19document-list_82899.png" />
+    <Content Include="Resources\resources\32349redapple_98912.png" />
+    <Content Include="Resources\resources\add_18212719.png" />
+    <Content Include="Resources\resources\add_9035574.png" />
+    <Content Include="Resources\resources\check-all_17198263.png" />
+    <Content Include="Resources\resources\check-all_171982631.png" />
+    <Content Include="Resources\resources\check_992481.png" />
+    <Content Include="Resources\resources\currency_exchange_finance_coins_money_usd_dollar_icon_262507.png" />
+    <Content Include="Resources\resources\employee_1628622.png" />
+    <Content Include="Resources\resources\Hello everyone! Welcome to the Shopping Festival! %282%29.png" />
+    <Content Include="Resources\resources\Hello everyone! Welcome to the Shopping Festival!.png" />
+    <Content Include="Resources\resources\icons8-add-male-user-group-48.png" />
+    <Content Include="Resources\resources\icons8-add-to-basket-64.png" />
+    <Content Include="Resources\resources\icons8-big-parcel-50.png" />
+    <Content Include="Resources\resources\icons8-checkout-48.png" />
+    <Content Include="Resources\resources\icons8-circled-right-60.png" />
+    <Content Include="Resources\resources\icons8-circled-right-601.png" />
+    <Content Include="Resources\resources\icons8-clue-50.png" />
+    <Content Include="Resources\resources\icons8-euro-money-48.png" />
+    <Content Include="Resources\resources\icons8-forward-button-30.png" />
+    <Content Include="Resources\resources\icons8-full-inbox-64.png" />
+    <Content Include="Resources\resources\icons8-inquiry-50.png" />
+    <Content Include="Resources\resources\icons8-inquiry-501.png" />
+    <Content Include="Resources\resources\icons8-list-64.png" />
+    <Content Include="Resources\resources\icons8-list-641.png" />
+    <Content Include="Resources\resources\icons8-plus-48.png" />
+    <Content Include="Resources\resources\icons8-print-48.png" />
+    <Content Include="Resources\resources\icons8-print-50.png" />
+    <Content Include="Resources\resources\icons8-print-501.png" />
+    <Content Include="Resources\resources\icons8-print-502.png" />
+    <Content Include="Resources\resources\icons8-save-50.png" />
+    <Content Include="Resources\resources\icons8-shopping-cart-24.png" />
+    <Content Include="Resources\resources\icons8-shopping-cart-48.png" />
+    <Content Include="Resources\resources\icons8-shopping-cart-96.png" />
+    <Content Include="Resources\resources\icons8-shutdown-64.png" />
+    <Content Include="Resources\resources\icons8-to-do-list-48.png" />
+    <Content Include="Resources\resources\icons8-tools-48.png" />
+    <Content Include="Resources\resources\icons8-total-sales-48.png" />
+    <Content Include="Resources\resources\icons8-total-sales-481.png" />
+    <Content Include="Resources\resources\icons8-total-sales-482.png" />
+    <Content Include="Resources\resources\icons8-trash-can-50.png" />
+    <Content Include="Resources\resources\icons8-user-48.png" />
+    <Content Include="Resources\resources\icons8-user-481.png" />
+    <Content Include="Resources\resources\logo.png" />
+    <Content Include="Resources\resources\Mac_Dictionary_23497.png" />
+    <Content Include="Resources\resources\money.png" />
+    <Content Include="Resources\resources\Nuts %284%29.png" />
+    <Content Include="Resources\resources\people.png" />
+    <Content Include="Resources\resources\pngegg %281%29.png" />
+    <Content Include="Resources\resources\pngwing.com.png" />
+    <Content Include="Resources\resources\power_on_off_switch_exit_icon_141963.png" />
+    <Content Include="Resources\resources\relief_goods_box_icon_148329.png" />
+    <Content Include="Resources\resources\shipping_products_22121.png" />
+    <Content Include="Resources\resources\shop-icon_34368.png" />
+    <Content Include="Resources\resources\shoppaymentorderbuy-07_icon-icons.com_73866.png" />
+    <Content Include="Resources\resources\subscription-business-model_18419552.png" />
+    <Content Include="Resources\resources\trophy_jewelry_winner_win_treasure_gift_blue_diamond_game_icon_262398.png" />
+    <Content Include="Resources\resources\White Black Modern Natural Skincare Products Banner.png" />
+    <Content Include="Resources\resources\wish_list_checklist_icon_192437.png" />
+    <Content Include="Resources\resources\تصميم بدون عنوان %2814%29 %282%29.png" />
+    <Content Include="Resources\resources\تصميم بدون عنوان %282%29.jpg" />
+    <Content Include="Resources\resources\تصميم بدون عنوان %285%29 %281%29.png" />
+    <Content Include="Resources\resources\تصميم بدون عنوان %287%29.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__12_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__13_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__15_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__20_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__21_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__22_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__22_-removebg-preview1.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__23_-removebg-preview %281%29.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__23_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__24_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__25_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__26_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__2_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__30_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__31_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__32_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__33_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__34_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__35_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__35_-removebg-preview1.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__4_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__4_-removebg-preview1.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__6_-removebg-preview %281%29.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__6_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__7_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__8_-removebg-preview.png" />
+    <Content Include="Resources\resources\تصميم_بدون_عنوان__9_-removebg-preview.png" />
+    <Content Include="Resources\resources\لقطة الشاشة 2025-04-14 174646.png" />
+    <Content Include="Resources\resources\لقطة_الشاشة_2025-04-14_174646-removebg-preview.png" />
+    <None Include="Resources\تصميم بدون عنوان %2827%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
